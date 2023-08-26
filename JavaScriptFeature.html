@@ -99,7 +99,8 @@
 
     const categorySelect = document.getElementById('category');
     const productTable = document.getElementById('productTable').querySelector('tbody');
-
+    
+    //displayProducts method display all or categorized products 
     function displayProducts(products) {
       productTable.innerHTML = '';
       products.forEach(product => {
@@ -114,6 +115,8 @@
       });
     }
 
+    //When the "change" event occurs, an event object is passed to the function as the first parameter. The type of the event object
+    //depends on the specified event. 
     categorySelect.addEventListener('change', () => {
       const selectedCategory = categorySelect.value;
       if (selectedCategory === '') {
